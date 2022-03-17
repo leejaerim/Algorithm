@@ -69,3 +69,22 @@ def solution(id_list, report, k):
     return answer
 print(solution(["con", "ryan"],["ryan con", "ryan con", "ryan con", "ryan con"],3))
 
+
+#######Best Answer
+
+def best_solution(id_list, report, k):
+    answer = [0] * len(id_list)    
+    reports = {x : 0 for x in id_list}
+
+    for r in set(report):
+        reports[r.split()[1]] += 1
+
+    for r in set(report):
+        if reports[r.split()[1]] >= k:
+            answer[id_list.index(r.split()[0])] += 1
+
+    return answer
+
+# 레포트의 람다함수와 set을 이용한 중복 제거 , list.index (내장함수) 등 미숙지로 오브젝트를 만드는 등 복잡하게 구현했다.
+# 반성할 부분 : 회고 해보면 딕셔너리 item()을 써서 반복문 키,값으로 출력하지도 않았거니와, 반복문 이터레이터의 존재도 모르고 있었다. 
+# 좋았던 부분 : 파이썬 애로우함수로 표현해보아서 좋았고, 클래스를 직접 만들어서 self나 메서드 등을 구현해 볼수 있어서 좋았다.
