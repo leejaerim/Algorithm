@@ -19,6 +19,7 @@ def solution(board, moves):
                 else :
                     if temp[-1] == j[i-1]:
                         temp.pop()
+                        j[i-1] = 0
                         answer += 2
                     else:
                         temp.append(j[i-1])
@@ -27,3 +28,7 @@ def solution(board, moves):
     return answer
 
 print(solution(board,moves))
+
+#30분도 안걸린것 같았다. 예전보다 많이 늘은것 같다.
+#list를 stack 처럼 사용한게 좋았고, 
+#peek를 list에서 [-1]로 표현하는 것에 대해 공부할 수 있었다.
