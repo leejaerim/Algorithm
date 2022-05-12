@@ -12,5 +12,3 @@ class Solution:
             else :
                 right = mid - 1
         return -1
-a = Solution()
-print(a.search([1,3,5,7],2))
