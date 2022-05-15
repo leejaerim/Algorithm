@@ -9,4 +9,4 @@ class Solution:
             _temp[3] = _list[3]+_list[4]
             _temp[4] = _list[4]
             _list = _temp
-         return _list[0]
+        return _list[0]
