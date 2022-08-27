@@ -35,4 +35,29 @@ class Solution:
 #         head.next.next = head
 #         head.next = None
 #         return p
-        
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+# second answer
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if head is None : return None
+        _list = []
+        next_to_go = None
+        while(head is not None):
+            _list.append(head)
+            head = head.next
+        head = None
+        while(_list):
+            temp = _list.pop()
+            if head is None:
+                head = temp
+                prev = temp
+            else:
+                prev.next = temp
+                prev = temp
+        temp.next = None
+        return head
