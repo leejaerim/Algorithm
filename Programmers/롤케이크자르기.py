@@ -16,7 +16,7 @@ def solution(topping):
                         second_flag = True
                         ans+=1
                 else :
-                     기   first_flag = False
+                     first_flag = False
                 if first_flag == False and second_flag == True:
                         break
         return ans
