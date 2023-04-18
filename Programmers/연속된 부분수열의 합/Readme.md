@@ -30,7 +30,7 @@
         left = 0
         _len = len(seq)
         minimum = len(seq)
-        if k in seq :
+        if k in seq :+
             return [seq.index(k),seq.index(k)]
         seq.reverse()
         for i,v in enumerate(seq):
